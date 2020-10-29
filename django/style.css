@@ -1,0 +1,294 @@
+/*
+1) 웹폰트
+2) 기본스타일이 브라우저별로 조금씩 다름, 이를 최소화 하기 위한 기법
+css reset
+css normalize 다운로드 후 <link rel="stylesheet" href="normalize.css">
+*/
+
+html {
+    font-size:10px;
+}
+* {
+    box-sizing::border-box;
+}
+body {
+    font-size:1.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+::selection{
+    background:#C9F0DD;
+}
+a {
+    text-decoration:none;
+}
+.header{
+    background:#0C4B33;
+    height:70px;
+}
+.header h1{
+    color:white;
+}
+
+.container, .container-float{
+    max-width:1400px;
+    /*background:#004d00;*/
+    margin:0 auto;
+    position:relative;
+    height:50px;
+    padding:10px 0;
+}
+.container span{
+    position:absolute;
+    top:18px;
+    left:140px;
+    margin:0;
+    width:250px;
+    color:#44B78B;
+}
+.logo {
+    position:absolute;
+    top:0;
+    left:0;
+    margin:0;
+    padding:15px 0 0 20px;
+}
+.nav {
+    text-align:right;
+}
+ul {
+    list-style:none;
+}
+.list-item {
+    display:inline;
+}
+header a {
+    color:white;
+    padding:10px;
+    font-weight:700;
+}
+header a:hover{
+    color:#00cc99;
+}
+.main{
+    /*background:DodgerBlue;*/
+}
+/* hero 영역 */
+.hero{
+    /*background:Orange;*/
+    text-align:center;
+    padding:50px 0;
+    /*아랫줄 선긋기*/
+    border-bottom:1px solid #00cc99;
+    height:280px;
+}
+.hero1{
+    font-size:3.5rem;
+    width:700px;
+    margin:30px auto;
+}
+.hero2{
+    display:block; /* 크기가 적용되도록 변경 */
+    width:300px;
+    background:#44B78B;
+    margin:10px auto; /* 가운데 정렬 */
+    color:white;
+    text-decoration:none;
+    padding:20px 10px; /* 버튼처럼 */
+    border-radius:5px; /* 테두리 둥글게 */
+    font-size:2rem;
+    font-weight:900;
+}
+/*.hero2.main-hero2 붙여서 쓰는 경우, .hero2와 .main-hero2이 모두 있는 경우 */
+.hero2:hover{
+    background:#00cc99;
+}
+.main-content{
+    /* background:Tomato; */
+    float:left;
+    width:60%;
+}
+.main-content img{
+
+}
+.main-title {
+    font-size:3rem;
+}
+.mailing {
+    /* background:pink; */
+    float:left;
+    width:50%;
+}
+.mailing-title {
+    color:#44B78B;
+}
+.mailing-title a {
+    color:#44B78B;
+}
+.mailing-title a:visited {
+    color:#44B78B;
+}
+.mailing-title a:hover {
+    color:#00cc99;
+}
+/*버튼의 위치 기준 */
+.frm1 {
+    position:relative;
+    margin:10px
+}
+.btn1 {
+    position:absolute; /* 기준이 되는 부모의 position 속성도 변경할 것 */
+    top:0;
+    right:50px;
+    border:0;
+    background:transparent; /* 바탕색 투명 */
+    cursor:pointer; /* 마우스 올리면 손가락*/
+}
+input {
+    width:65%;
+    height:30px;
+    padding:5px 80px 5px 5px;
+    border:1px solid #44B78B;
+}
+.mailing-layout::after {
+    content:'';
+    display:block;
+    clear:both;
+}
+.main-end {
+    clear:both;
+}
+/* 1) main-content와 side-content의 부모로서 자리하지 못함. 부모에 가상요소를 주어 해제 */
+.container-float::after{
+    content:'';
+    display:block;
+    clear:both;
+}
+.side-content{
+    background:#f8f8f8;
+    float:right;
+    width:30%;
+    padding:20px 50px;
+    height:800px;
+}
+.side-hero2 {
+    display:block; /* 크기가 적용되도록 변경 */
+    width:90%;
+    background:#44B78B;
+    margin:10px auto; /* 가운데 정렬 */
+    color:white;
+    text-decoration:none;
+    padding:20px 10px; /* 버튼처럼 */
+    border-radius:5px; /* 테두리 둥글게 */
+    font-size:1.5rem;
+    font-weight:900;
+    text-align:center;
+}
+.side-hero2:hover{
+    background:#00cc99;
+}
+.side-cta:hover{
+    background:#00cc99;
+}
+.infos-support img{
+    float:left;
+}
+.infos-support p{
+    padding:20px 20px 20px 100px;
+}
+
+.more {
+    display:block;
+    color:#44B78B;
+    text-align:center;
+    padding:10px;
+}
+.more::after {
+    content:' >';
+}
+.info-latest-news{
+    padding:0 30px;
+}
+.infos-title {
+    clear:both;
+    border-bottom:1px solid gray;
+    padding:10px 0 20px 0;
+}
+.news-title a{
+    color:#44B78B;
+}
+.news-title a:visited{
+    color:#44B78B;
+}
+.news-title:hover{
+    color:#00cc99;
+}
+.news-meta {
+    color:gray;
+}
+.news-meta span {
+    font-weight:900;
+}
+.info-latest-news a {
+    color:#44B78B;
+    font-weight:900;
+}
+.info-latest-news a:hover{
+    color:#00cc99;
+}
+.info-latest-news a:visited{
+    color:#44B78B;
+}
+a {
+    color:#44B78B;
+}
+
+
+/* container-float가 자식의 높이를 완벽히 가짐을 확인 */
+.footer1{
+    clear:both; /* 2) main-content와 side-content의 float 영역으로부터 독립적으로 나타냄 */
+}
+.fcontainer1{
+    clear:both;
+    background:#44B78B;
+    height:350px;
+    color:white;
+    margin:0;
+}
+.fcontainer1 h3{
+    padding:10px;
+}
+.fcontainer1 ul{
+    padding:0
+}
+.fcontainer1 li{
+    padding:10px;
+}
+.fcontent1 a{
+    color:white;
+}
+.fcontent1 a:hover{
+    text-decoration:underline;
+}
+
+.fcontent1{
+    float:left;
+    width:25%;
+}
+.fcontainer2{
+    clear:both;
+    background:#0C4B33;
+    margin:0;
+    height:130px;
+    color:#2B8C67;
+}
+.fcontent2{
+    float:left;
+    width:30%;
+    padding:10px;
+}
+.fcontent2 h1{
+    color:white;
+}
+.fcontainer2 p{
+    clear:both;
+}
